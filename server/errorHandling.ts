@@ -1,5 +1,15 @@
-import { Item } from "./routes";
 import { Request } from "express";
+
+export interface Item {
+  id: string,
+  title: string,
+  description: string,
+  price: string,
+  location: string,
+  contact: string,
+  category: string,
+  imageUrl: string
+};
 
 class ServerError extends Error {
   status: number

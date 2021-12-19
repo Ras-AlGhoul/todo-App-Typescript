@@ -3,7 +3,7 @@ import config from './config/default';
 import log from './logger';
 import routes from "./routes/index";
 import cors from 'cors';
-import connect from './db/mogoose';
+import dbConnect from './db/mogoose';
 
 const port = config.port as number;
 const host = config.host as string;
@@ -16,6 +16,6 @@ app.use(cors());
 
 app.listen(port, host, () => {
     log.info(`app is running on ${host}:${port}`);
-    connect();
+    dbConnect();
     routes(app);
   });
