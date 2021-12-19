@@ -9,17 +9,24 @@ export default function (app: Express) {
       res.setHeader('content-type', 'application/json');
       reqBodyValidator(req);
       const todo = new Todo(req.body);
-      todo.save().then(response => res.send(response));
+      todo.save()
+      .then(response => res.send(response))
+      .catch(err => res.status(400).send(err));
     });
 
-  app.route('api/todos/:id')
+  app.route('/api/todos/:id')
    .put((req:Request, res:Response) => {
-     
+     const { id } = req.params;
+     const editBody = req.body;
+    Todo.findByIdAndUpdate(id, { done: editBody.done })
+    .then( (review) => res.send(review))
+    .catch(err => res.status(400).send(err));
    })
    .delete((req:Request, res:Response) => {
-     const { id } = req.params;
+     const { id }= req.params;
      Todo.deleteOne({_id: id})
-     .then(() => res.status(204).end());
+     .then(() => res.send('deleted successfully!'))
+     .catch(err => res.status(400).send(err));
    })
 
 
