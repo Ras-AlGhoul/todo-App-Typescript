@@ -1,10 +1,11 @@
 import React from 'react';
+import Home from './pages/Home';
 import './styles/App.css';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
-      Todo App
+      <Home />
     </div>
   )
 }

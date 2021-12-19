@@ -1,9 +1,12 @@
 import React from 'react'
+import TodoList from '../components/TodoList';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div>
-      
+    <div className='home'>
+      <h1 className='home__header'>Todo App</h1><br/>
+      <p className='home__description'>Todo App made for Ubiquiti</p>
+       <TodoList/>
     </div>
   )
 }

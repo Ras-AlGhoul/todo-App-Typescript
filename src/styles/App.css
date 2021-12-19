@@ -1,3 +1,24 @@
 .App {
   text-align: center;
+  font-family: arial;
+}
+
+.home{
+  display: grid;
+  justify-content: center;
+}
+
+.home__header{
+  height: 80px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  border-left: 12px solid;
+  border-color: #96C7C1;
+}
+
+.home__description{
+  display: flex;
+  justify-content:space-evenly;
+  font-size: 20px;
+  color: gray
 }
