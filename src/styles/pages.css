@@ -30,7 +30,7 @@
   margin-bottom: 8px;
   box-sizing: border-box;
   border-left: 12px solid;
-  border-color: #d15353;
+  border-color: #3c743a;
 }
 
 .workTasks__description{
@@ -51,7 +51,7 @@
   margin-bottom: 8px;
   box-sizing: border-box;
   border-left: 12px solid;
-  border-color: #c04b89;
+  border-color: #a03535;
 }
 
 .foodTasks__description{

@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react'
+import { Todo } from '../utils/types';
 import Card from './Card';
+import TodoForm from './TodoForm';
 
 const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState<any[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   const fetchTodos = async(): Promise<void> => {
     fetch('http://localhost:4000/api/todos')
@@ -12,14 +14,14 @@ const TodoList: React.FC = () => {
 
   useEffect(() => {
     fetchTodos();
-    console.log('sdss', todos);
     return () => {
     }
   }, []);
   
   return (
     <div>
-      {todos.map((i, index) => <Card key={index} title={i.title} description={i.description} done={i.done} />)}
+      <TodoForm fetchTodos={fetchTodos}/>
+      {todos.map((i, index) => <Card key={index} fetchTodos={fetchTodos} _id={i._id} title={i.title} description={i.description} done={i.done} />).reverse()}
     </div>
   )
 }

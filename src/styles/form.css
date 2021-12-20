@@ -1,0 +1,45 @@
+.form{
+  text-align: left;
+  padding: 35px 20px;
+  border-radius: 25px;
+}
+
+.form__label{
+  font-size: 20px;
+}
+
+.form__input{
+  height: 30px;
+  width: 100%;
+  border: 3px solid #96C7C1;
+  border-radius: 10px;
+}
+.form__confirmBtn {
+  float: right;
+  margin-top: 16px;
+  border: 1px solid #96C7C1;
+  background: none;
+  height: 30px;
+  width: 70px;
+  border-radius: 7px;
+  color: black;
+}
+
+.form__confirmBtn:hover{
+  color: azure;
+  background-color: #96C7C1;
+}
+
+.form__addBtn {
+  border: 1px solid #96C7C1;
+  background: none;
+  height: 30px;
+  width: 140px;
+  border-radius: 7px;
+  color: black;
+}
+
+.form__addBtn:hover{
+  color: azure;
+  background-color: #96C7C1;
+}
