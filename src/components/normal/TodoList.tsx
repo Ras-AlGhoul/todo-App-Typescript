@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Todo } from '../utils/types';
+import { Todo } from '../../utils/types';
 import Card from './Card';
 import TodoForm from './TodoForm';
 

@@ -36,10 +36,88 @@
   height: 30px;
   width: 140px;
   border-radius: 7px;
-  color: black;
+  color: azure;
+  background-color: #96C7C1;
 }
 
 .form__addBtn:hover{
+  color: black;
+  background-color: transparent;
+}
+
+
+.foodform__input{
+  height: 30px;
+  width: 100%;
+  border: 3px solid #a03535;
+  border-radius: 10px;
+}
+.foodform__confirmBtn {
+  float: right;
+  margin-top: 16px;
+  border: 1px solid #a03535;
+  background: none;
+  height: 30px;
+  width: 70px;
+  border-radius: 7px;
+  color: black;
+}
+
+.foodform__confirmBtn:hover{
   color: azure;
-  background-color: #96C7C1;
+  background-color: #a03535;
+}
+
+.foodform__addBtn {
+  border: 1px solid #a03535;
+  background: none;
+  height: 30px;
+  width: 140px;
+  border-radius: 7px;
+  color: azure;
+  background-color: #a03535;
+}
+
+.foodform__addBtn:hover{
+  color: black;
+  background-color: transparent;
+}
+
+
+
+.workform__input{
+  height: 30px;
+  width: 100%;
+  border: 3px solid #3b8f68;
+  border-radius: 10px;
+}
+.workform__confirmBtn {
+  float: right;
+  margin-top: 16px;
+  border: 1px solid #3b8f68;
+  background: none;
+  height: 30px;
+  width: 70px;
+  border-radius: 7px;
+  color: black;
+}
+
+.workform__confirmBtn:hover{
+  color: azure;
+  background-color: #3b8f68;
+}
+
+.workform__addBtn {
+  border: 1px solid #3b8f68;
+  background: none;
+  height: 30px;
+  width: 140px;
+  border-radius: 7px;
+  color: azure;
+  background-color: #3b8f68;
+}
+
+.workform__addBtn:hover{
+  color: black;
+  background-color: transparent;
 }

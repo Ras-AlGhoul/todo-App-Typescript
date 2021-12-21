@@ -1,9 +1,8 @@
 import axios from 'axios';
-import React, { useState } from 'react'
-interface Props{
-  fetchTodos: () => Promise<void>
-}
-const TodoForm: React.FC<Props> = ({fetchTodos}) => {
+import React, { useState } from 'react';
+import { Form } from '../../utils/types';
+
+const TodoForm: React.FC<Form> = ({fetchTodos}) => {
   const [title, setTitle] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [toggle, setToggle] = useState<Boolean>(false);
