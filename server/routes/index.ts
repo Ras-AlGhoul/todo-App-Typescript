@@ -1,5 +1,5 @@
 import { Express, NextFunction, Request, Response } from "express";
-import { idValidator, nextId, reqBodyValidator } from '../errorHandling';
+import { reqBodyValidator } from '../errorHandling';
 import Todo from '../db/models/Todo';
 
 export default function routes(app: Express) {
@@ -27,7 +27,7 @@ export default function routes(app: Express) {
       Todo.deleteOne({ _id: id })
         .then(() => res.send('deleted successfully!'))
         .catch(err => res.status(400).send(err));
-    })
+    });
 
 
   app.use((err: any, req: Request, res: Response, next: NextFunction) => {

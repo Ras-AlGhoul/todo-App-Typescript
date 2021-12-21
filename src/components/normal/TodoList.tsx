@@ -21,7 +21,7 @@ const TodoList: React.FC = () => {
   return (
     <div>
       <TodoForm fetchTodos={fetchTodos}/>
-      {todos.map((i, index) => <Card key={index} fetchTodos={fetchTodos} _id={i._id} title={i.title} description={i.description} done={i.done} />).reverse()}
+      {todos.sort(i => i.done? -1 : 1).map((i, index) => <Card key={index} fetchTodos={fetchTodos} _id={i._id} title={i.title} description={i.description} done={i.done} />).reverse()}
     </div>
   )
 }

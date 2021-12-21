@@ -33,6 +33,13 @@
   margin: 10px 10px;
 }
 
+.card__undonebtn{
+  width: 19px;
+  height: 23px;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
 .workcard{
   border: 3px solid #3b8f68;
   border-radius: 5px;

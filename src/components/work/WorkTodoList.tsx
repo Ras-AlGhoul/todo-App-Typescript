@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Todo } from '../../utils/types';
-import Card from '../normal/Card';
 import WorkCard from './WorkCard';
 import WorkForm from './WorkForm';
 
@@ -25,6 +24,6 @@ const WorkTodoList = () => {
       {todos.map((i, index) => <WorkCard key={index} fetchTodos={fetchTodos} _id={i._id} title={i.title} description={i.description} done={i.done} />).reverse()}
     </div>
   )
-}
+};
 
-export default WorkTodoList
+export default WorkTodoList;

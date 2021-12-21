@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Todo } from '../../utils/types';
-import Card from '../normal/Card';
 import FoodCard from './FoodCard';
 import FoodForm from './FoodForm';
 
