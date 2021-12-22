@@ -1,0 +1,34 @@
+.filter{
+  display: flex;
+  border:1px solid #96C7C1;
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.filter__pending{
+  border-right: 1px solid ;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 320px;
+}
+
+.filter__pending:hover{
+  background-color: #96C7C1;
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.filter__done{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 325px;
+}
+
+.filter__done:hover{
+  background-color: #96C7C1;
+  color: cornsilk;
+  cursor: pointer;
+}

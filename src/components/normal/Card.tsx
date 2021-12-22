@@ -8,6 +8,7 @@ const Card: React.FC<Todo> = ({ title, description, done, _id, fetchTodos }) => 
     fetchTodos();
   };
 
+  const handleEdit = async (): Promise<void> => {console.log('s');}
   const handleDone = async (): Promise<void> => {
     await axios.put(`http://localhost:4000/api/todos/${_id}`, { done: true });
     fetchTodos();
@@ -25,7 +26,10 @@ const Card: React.FC<Todo> = ({ title, description, done, _id, fetchTodos }) => 
         <div className='card__buttons'>
           <img alt='remove-btn' className='card__removebtn' onClick={handleRemove} src='https://i.postimg.cc/Hx3vRdFL/7.png' />
           {!done && (
+            <>
+            <img alt='edit-btn' className='card__donebtn' onClick={handleEdit} src='https://i.postimg.cc/JzLf7cCS/9.png'/>
             <img alt='done-btn' className='card__donebtn' onClick={handleDone} src='https://i.postimg.cc/5NyC62Hb/5.png' />
+            </>
           )}
           {done && (
             <img alt='done-btn' className='card__undonebtn' onClick={handleUndone} src='https://i.postimg.cc/kghn5WVv/8.png' />

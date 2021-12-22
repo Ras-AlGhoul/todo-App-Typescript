@@ -26,7 +26,7 @@
 }
 
 .form__confirmBtn:hover{
-  color: azure;
+  color: cornsilk;
   background-color: #96C7C1;
 }
 
@@ -36,7 +36,7 @@
   height: 30px;
   width: 140px;
   border-radius: 7px;
-  color: azure;
+  color: cornsilk;
   background-color: #96C7C1;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .foodform__confirmBtn:hover{
-  color: azure;
+  color: cornsilk;
   background-color: #a03535;
 }
 
@@ -74,7 +74,7 @@
   height: 30px;
   width: 140px;
   border-radius: 7px;
-  color: azure;
+  color: cornsilk;
   background-color: #a03535;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .workform__confirmBtn:hover{
-  color: azure;
+  color: cornsilk;
   background-color: #3b8f68;
 }
 
@@ -113,7 +113,7 @@
   height: 30px;
   width: 140px;
   border-radius: 7px;
-  color: azure;
+  color: cornsilk;
   background-color: #3b8f68;
 }
 

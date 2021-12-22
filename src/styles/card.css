@@ -1,18 +1,19 @@
 .card{
- border: 3px solid #96C7C1;
- border-radius: 5px;
- display: grid;
- align-items: center;
- justify-content: center;
- margin-top: 20px;
+  border: 3px solid #96C7C1;
+  border-radius: 5px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 640px;
 }
 
 .card__title{
- font-size: larger;
+  font-size: larger;
 }
 
 .card__description{
- color: gray;
+  color: gray;
 }
 
 .card__buttons{
@@ -47,13 +48,15 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
- }
+  width: 640px;
+}
 
- .foodcard{
+.foodcard{
   border: 3px solid #a03535;
   border-radius: 5px;
   display: grid;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
- }
+  width: 640px;
+}
