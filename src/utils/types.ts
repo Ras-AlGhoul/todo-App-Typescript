@@ -1,5 +1,5 @@
 export type Todo = {
-  _id?:String,
+  _id:string,
   title: String,
   description: String,
   done?: Boolean,
@@ -7,5 +7,5 @@ export type Todo = {
 }
 
 export type Form = {
-  fetchTodos: () => Promise<void>
+  fetchTodos: () => Promise<void>,
 }

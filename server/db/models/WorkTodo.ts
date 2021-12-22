@@ -1,14 +1,14 @@
 import { Document, Schema, model } from 'mongoose';
 
-interface ITodo extends Document {
+interface IWorkTodo extends Document {
     title: String,
     description: String,
     done: Boolean,
-    price: String,
-    subTasks?: ITodo[],
+    subTasks: IWorkTodo[],
+    deadline: String
 }
 
-const TodosSchema = new Schema<ITodo>({
+const TodosSchema = new Schema<IWorkTodo>({
     title: {
         type: String,
         required: true
@@ -18,10 +18,10 @@ const TodosSchema = new Schema<ITodo>({
         type: Boolean,
         default: false
     },
-    price: String,
     subTasks: [{}],
+    deadline: String,
 });
 
-const Todo = model<ITodo>('Todo', TodosSchema);
+const Todo = model<IWorkTodo>('Todo', TodosSchema);
 
 export default Todo;

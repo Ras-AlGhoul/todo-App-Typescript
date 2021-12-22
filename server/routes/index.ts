@@ -18,7 +18,11 @@ export default function routes(app: Express) {
     .put((req: Request, res: Response) => {
       const { id } = req.params;
       const editBody = req.body;
-      Todo.findByIdAndUpdate(id, { done: editBody.done })
+      Todo.findByIdAndUpdate(id, {
+        title: editBody.title,
+        description: editBody.description,
+        done: editBody.done
+      })
         .then((review) => res.send(review))
         .catch(err => res.status(400).send(err));
     })
