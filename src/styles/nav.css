@@ -1,0 +1,27 @@
+.nav {
+  height: 100%;
+  width: 35px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(233, 233, 233);
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding: 9px;
+}
+
+.nav__logo{
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  height: 35px;
+  width: 35px;
+}
+.nav__img{
+  margin-top: 90px;
+  border-radius: 5px;
+  height: 35px;
+  cursor: pointer;
+  width: 35px;
+}

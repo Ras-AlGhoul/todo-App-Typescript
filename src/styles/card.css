@@ -1,0 +1,62 @@
+.card{
+  border: 3px solid #96C7C1;
+  border-radius: 5px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 640px;
+}
+
+.card__title{
+  font-size: larger;
+}
+
+.card__description{
+  color: gray;
+}
+
+.card__buttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+.card__removebtn{
+  width: 17px;
+  height: 23px;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
+.card__donebtn{
+  width: 19px;
+  height: 23px;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
+.card__undonebtn{
+  width: 19px;
+  height: 23px;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
+.workcard{
+  border: 3px solid #3b8f68;
+  border-radius: 5px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 640px;
+}
+
+.foodcard{
+  border: 3px solid #a03535;
+  border-radius: 5px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 640px;
+}
