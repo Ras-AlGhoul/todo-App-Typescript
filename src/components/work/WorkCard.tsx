@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const WorkCard: React.FC<Todo> = ({ title, description, done, _id, fetchTodos }) => {
   const handleRemove = async (): Promise<void> => {
-    await axios.delete(`http://localhost:4000/api/todos/${_id}`);
+    await axios.delete(`http://localhost:4000/api/worktodos/${_id}`);
     fetchTodos();
   };
 

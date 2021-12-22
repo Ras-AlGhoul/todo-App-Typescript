@@ -14,7 +14,7 @@ const WorkForm: React.FC<Form> = ({ fetchTodos }) => {
         title,
         description
       }
-      await axios.post('http://localhost:4000/api/todos', newTodo);
+      await axios.post('http://localhost:4000/api/worktodos', newTodo);
       setToggle(show => !show);
       setTitle('');
       setDescription('');

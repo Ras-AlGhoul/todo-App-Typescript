@@ -22,6 +22,6 @@ const TodosSchema = new Schema<IWorkTodo>({
     deadline: String,
 });
 
-const Todo = model<IWorkTodo>('Todo', TodosSchema);
+const Todo = model<IWorkTodo>('WorkTodo', TodosSchema);
 
 export default Todo;

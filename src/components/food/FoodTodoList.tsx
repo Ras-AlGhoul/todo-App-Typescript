@@ -8,7 +8,7 @@ const FoodTodoList = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   const fetchTodos = async(): Promise<void> => {
-    fetch('http://localhost:4000/api/todos')
+    fetch('http://localhost:4000/api/foodtodos')
     .then(res => res.json())
     .then(res => setTodos(res));
   };

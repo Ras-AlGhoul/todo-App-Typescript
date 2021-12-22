@@ -1,9 +1,11 @@
 import express from 'express';
 import config from './config/default';
 import log from './logger';
-import routes from "./routes/index";
+import todoRoutes from "./routes/todoRoutes";
 import cors from 'cors';
 import dbConnect from './db/mogoose';
+import foodTodoRoutes from './routes/foodTodoRoutes';
+import workTodoRoutes from './routes/workTodoRoutes';
 
 const port = config.port as number;
 const host = config.host as string;
@@ -17,5 +19,7 @@ app.use(cors());
 app.listen(port, host, () => {
     log.info(`app is running on ${host}:${port}`);
     dbConnect();
-    routes(app);
+    todoRoutes(app);
+    foodTodoRoutes(app);
+    workTodoRoutes(app);
   });

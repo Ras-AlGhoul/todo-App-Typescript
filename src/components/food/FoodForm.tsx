@@ -17,7 +17,7 @@ const FoodForm:React.FC<Form> = ({fetchTodos}) => {
         description,
         imageUrl,
       }
-      await axios.post('http://localhost:4000/api/todos', newTodo);
+      await axios.post('http://localhost:4000/api/foodtodos', newTodo);
       setToggle(show => !show);
       setTitle('');
       setDescription('');
