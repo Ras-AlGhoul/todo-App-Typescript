@@ -1,11 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import config from './config/default';
 import log from './logger';
 import todoRoutes from "./routes/todoRoutes";
-import cors from 'cors';
-import dbConnect from './db/mogoose';
 import foodTodoRoutes from './routes/foodTodoRoutes';
 import workTodoRoutes from './routes/workTodoRoutes';
+import dbConnect from './db/mogoose';
 
 const port = config.port as number;
 const host = config.host as string;
@@ -23,3 +23,4 @@ app.listen(port, host, () => {
     foodTodoRoutes(app);
     workTodoRoutes(app);
   });
+  

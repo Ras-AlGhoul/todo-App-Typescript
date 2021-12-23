@@ -11,7 +11,7 @@ const ImageUpload: React.FC<any> = ({ uploadImg }) => {
     imagePreset.append("upload_preset", "Ubiquiti");
     setImgFile(imagePreset);
   };
-
+  
   const postToCloude = async () => {
     try {
         const response = await axios.post(`https://api.cloudinary.com/v1_1/${token}/image/upload`, imgFile);
@@ -33,7 +33,7 @@ const ImageUpload: React.FC<any> = ({ uploadImg }) => {
 
   return (
     <div>
-       <label htmlFor="files" className="file"> Select Image </label>
+       <label htmlFor="files" className="form__filebtn"> Select Image </label>
       <input id="files" type="file" style={{ visibility: "hidden" }} onChange={imageUpload} />
     </div>
   )
