@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FoodTodo } from '../../utils/types';
 import axios from 'axios';
-import EditForm from '../normal/EditForm';
+import EditFoodForm from './EditFoodForm';
 
 const FoodCard: React.FC<FoodTodo> = ({
   title,
@@ -46,7 +46,7 @@ const FoodCard: React.FC<FoodTodo> = ({
             <img alt='edit-btn' className='card__donebtn' onClick={handleEdit} src='https://i.postimg.cc/JzLf7cCS/9.png' />
             <img alt='done-btn' className='card__donebtn' onClick={handleDone} src='https://i.postimg.cc/5NyC62Hb/5.png' />
             {toggle && (
-              <EditForm fetchTodos={fetchTodos} id={_id} setToggle={setToggle} toggle={toggle} />
+              <EditFoodForm fetchTodos={fetchTodos} id={_id} setToggle={setToggle} toggle={toggle} />
             )}
           </>
         )}

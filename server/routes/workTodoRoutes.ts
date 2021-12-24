@@ -21,7 +21,8 @@ export default function workTodoRoutes(app: Express) {
       WorkTodo.findByIdAndUpdate(id, {
         title: editBody.title,
         description: editBody.description,
-        done: editBody.done
+        done: editBody.done,
+        deadline: editBody.deadline
       })
         .then((review) => res.send(review))
         .catch(err => res.status(400).send(err));

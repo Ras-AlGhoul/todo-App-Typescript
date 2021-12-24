@@ -21,7 +21,10 @@ export default function foodTodoRoutes(app: Express) {
       FoodTodo.findByIdAndUpdate(id, {
         title: editBody.title,
         description: editBody.description,
-        done: editBody.done
+        done: editBody.done,
+        imageUrl: editBody.imageUrl,
+        carbohydrate: editBody.carbohydrate,
+        protein: editBody.protein
       })
         .then((review) => res.send(review))
         .catch(err => res.status(400).send(err));
