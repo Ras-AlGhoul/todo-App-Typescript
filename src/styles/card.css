@@ -20,6 +20,7 @@
   display: flex;
   justify-content: space-evenly;
 }
+
 .card__removebtn{
   width: 17px;
   height: 23px;
@@ -59,4 +60,8 @@
   justify-content: center;
   margin-top: 20px;
   width: 640px;
+}
+
+.card__img{
+  width: 643px;
 }

@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
 import axios from 'axios';
-import { Form } from '../../utils/types';
+import React, { useState } from 'react';
 
-const WorkForm: React.FC<Form> = ({ fetchTodos }) => {
+interface Props{
+  fetchTodos: () => Promise<void>,
+  id: string,
+  toggle: boolean,
+  setToggle: (toggle: boolean) => void
+}
+
+const EditWorkForm: React.FC<Props> = ({fetchTodos, id, setToggle, toggle}) => {
   const [title, setTitle] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [deadline, setDeadline] = useState<string>('');
-  const [toggle, setToggle] = useState<Boolean>(false);
 
   const handleSubmit: (e: React.FormEvent<HTMLFormElement>) => Promise<void> =
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      const newTodo = {
+      const editTodo = {
         title,
         description,
         deadline
       }
-      await axios.post('http://localhost:4000/api/worktodos', newTodo);
-      setToggle(show => !show);
+      await axios.put(`http://localhost:4000/api/worktodos/${id}`, editTodo);
+      setToggle(!toggle);
       setTitle('');
       setDescription('');
       fetchTodos();
@@ -25,10 +30,6 @@ const WorkForm: React.FC<Form> = ({ fetchTodos }) => {
 
   return (
     <div className='form'>
-      {!toggle && (
-        <button className='workform__addBtn' onClick={() => setToggle(show => !show)}>Add Todo</button>
-      )}
-      {toggle && (
         <form onSubmit={handleSubmit}>
           <label className='form__label'><strong> Title: </strong></label>
           <input className='workform__input' value={title} onChange={({ target: { value } }) => setTitle(value)} />
@@ -38,9 +39,9 @@ const WorkForm: React.FC<Form> = ({ fetchTodos }) => {
           <input className='workform__input' value={deadline} onChange={({ target: { value } }) => setDeadline(value)} />
           <button type="submit" className='workform__confirmBtn'> Confirm </button>
         </form>
-      )}
+   
     </div>
   )
-}
+};
 
-export default WorkForm
+export default EditWorkForm;

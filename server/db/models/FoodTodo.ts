@@ -24,6 +24,6 @@ const TodosSchema = new Schema<IFoodTodo>({
     protein: String
 });
 
-const FoodTodo = model<IFoodTodo>('Todo', TodosSchema);
+const FoodTodo = model<IFoodTodo>('FoodTodo', TodosSchema);
 
 export default FoodTodo;

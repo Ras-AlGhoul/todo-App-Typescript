@@ -32,3 +32,73 @@
   color: cornsilk;
   cursor: pointer;
 }
+
+.foodfilter{
+  display: flex;
+  border:1px solid #a03535;
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.foodfilter__pending{
+  border-right: 1px solid ;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 320px;
+}
+
+.foodfilter__pending:hover{
+  background-color: #a03535;
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.foodfilter__done{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 325px;
+}
+
+.foodfilter__done:hover{
+  background-color: #a03535;
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.workfilter{
+  display: flex;
+  border:1px solid #3b8f68;
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.workfilter__pending{
+  border-right: 1px solid ;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 320px;
+}
+
+.workfilter__pending:hover{
+  background-color: #3b8f68;
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.workfilter__done{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  width: 325px;
+}
+
+.workfilter__done:hover{
+  background-color: #3b8f68;
+  color: cornsilk;
+  cursor: pointer;
+}

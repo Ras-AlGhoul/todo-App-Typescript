@@ -14,7 +14,6 @@ const Nav:React.FC = () => {
         <img className="nav__img" alt="food todos" title="Food Tasks" src="https://i.postimg.cc/RZKswZSw/1.png"/>
       </Link>
       <hr/>
-
       <Link to="/worktasks">
         <img className="nav__img" alt="work todos" title="work Tasks" src="https://i.postimg.cc/LX28m5XD/3.png"/>
       </Link>

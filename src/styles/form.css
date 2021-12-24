@@ -121,3 +121,20 @@
   color: black;
   background-color: transparent;
 }
+
+
+.form__filediv{
+  margin-top: 20px;
+}
+
+.form__filebtn{
+  margin-top: 20px;
+  border: 2px solid #a03535;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.form__filebtn:hover{
+ background-color: #a03535;
+ color: cornsilk;
+}

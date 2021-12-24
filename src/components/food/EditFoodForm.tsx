@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
 import axios from 'axios';
-import { Form } from '../../utils/types';
+import React, { useState } from 'react';
 import ImageUpload from './ImageUpload';
 
-const FoodForm: React.FC<Form> = ({ fetchTodos }) => {
+interface Props{
+  fetchTodos: () => Promise<void>,
+  id: string,
+  toggle: boolean,
+  setToggle: (toggle: boolean) => void
+}
+
+const EditFoodForm: React.FC<Props> = ({fetchTodos, id, setToggle, toggle}) => {
   const [title, setTitle] = useState<string>('');
   const [description, setDescription] = useState<string>('');
-  const [toggle, setToggle] = useState<Boolean>(false);
   const [imageUrl, setImageUrl] = useState<string>('');
   const [carbohydrate, setCarbohydrate] = useState<string>('');
   const [protein, setProtein] = useState<string>('');
@@ -14,15 +19,15 @@ const FoodForm: React.FC<Form> = ({ fetchTodos }) => {
   const handleSubmit: (e: React.FormEvent<HTMLFormElement>) => Promise<void> =
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      const newTodo = {
+      const editTodo = {
         title,
         description,
         imageUrl,
         carbohydrate,
         protein
       }
-      await axios.post('http://localhost:4000/api/foodtodos', newTodo);
-      setToggle(show => !show);
+      await axios.put(`http://localhost:4000/api/foodtodos/${id}`, editTodo);
+      setToggle(!toggle);
       setTitle('');
       setDescription('');
       fetchTodos();
@@ -30,10 +35,6 @@ const FoodForm: React.FC<Form> = ({ fetchTodos }) => {
 
   return (
     <div className='form'>
-      {!toggle && (
-        <button className='foodform__addBtn' onClick={() => setToggle(show => !show)}>Add Todo</button>
-      )}
-      {toggle && (
         <form onSubmit={handleSubmit}>
           <label className='form__label'><strong> Title: </strong></label>
           <input className='foodform__input' value={title} onChange={({ target: { value } }) => setTitle(value)} />
@@ -48,9 +49,9 @@ const FoodForm: React.FC<Form> = ({ fetchTodos }) => {
           </div>
           <button type="submit" className='foodform__confirmBtn'> Confirm </button>
         </form>
-      )}
+   
     </div>
   )
-}
+};
 
-export default FoodForm
+export default EditFoodForm;

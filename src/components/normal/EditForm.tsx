@@ -7,6 +7,7 @@ interface Props{
   toggle: boolean,
   setToggle: (toggle: boolean) => void
 }
+
 const EditForm: React.FC<Props> = ({fetchTodos, id, setToggle, toggle}) => {
   const [title, setTitle] = useState<string>('');
   const [description, setDescription] = useState<string>('');
